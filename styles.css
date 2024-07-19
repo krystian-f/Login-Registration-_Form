@@ -1,0 +1,212 @@
+html{
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+*, *::before, *::after{
+  box-sizing: border-box;
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+body{
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0 auto;
+  background-color: hsl(210, 50%, 90%);
+}
+
+a{
+  text-decoration: none;
+}
+
+/* -- */
+main{
+  width: 100%;
+  min-height: 100vh;
+  display: grid;
+  place-content: center;
+}
+
+.forms-container{
+  background-color: hsla(0, 100%, 100%, .5);
+  width: 100%;
+  width: 50rem;
+  max-width: 100%;  
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  padding: 5rem 2rem;
+}
+
+.form__labels{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+}
+
+.form__label{
+  width: 30%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  border-radius: 1rem;
+  background-color: transparent;
+  color: hsl(240, 50%, 50%);
+  padding: 2rem 1rem;
+  font-size: 1.6rem;
+}
+
+.form__label:hover{
+  cursor:pointer;
+}
+
+.form__label-sign-in.active{
+  background-color: hsl(240, 50%, 50%);
+  color: hsl(0, 50%, 100%);
+}
+
+.form__label-sign-up.active{
+  background-color: hsl(240, 50%, 50%);
+  color: hsl(0, 50%, 100%);
+}
+
+/* Forms content */
+
+.form__content{
+  width: 100%;
+  padding-top: 3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.form__content-inputs{
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.form__input-box{
+  width: 100%;
+  position: relative;
+}
+
+.sign-in__input{
+  width: 100%;
+  height: 4rem;
+  border-radius: 1rem;
+  border: none;
+  box-shadow: 0 0 5px hsla(240, 50%, 0%, .2);
+  padding-left: 4rem;
+}
+
+.sign-in__input::placeholder{
+  opacity: .6;
+}
+
+.form__input-box-ico{
+  font-size: 2rem;
+  position: absolute;
+  left: 1rem;
+  top: 0;
+  transform: translateY(50%);
+  opacity: .6;
+}
+
+.form__input-box-ico-visibility{
+  font-size: 2rem;
+  position: absolute;
+  right: 1rem;
+  top: 0;
+  transform: translateY(50%);
+  opacity: .6;
+}
+
+.form__input-box-ico-visibility:hover{
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.form__forgotten-password{
+  color: hsl(240, 50%, 50%);
+  font-size: 1.4rem;
+}
+
+.form__rememeber{
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  gap: 1rem;
+  font-size: 1.6rem;
+}
+
+.sign-in__input-remember{
+  height: 1.6rem;
+  width: 1.6rem;
+  box-shadow: 0 0 5px hsla(240, 50%, 0%, .2);
+}
+
+.form-btn{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  border-radius: 1rem;
+  background-color: hsl(240, 50%, 50%);
+  color: hsl(0, 50%, 100%);
+  padding: 1.5rem 0;
+  font-size: 1.6rem;
+  border: none;
+}
+
+
+.form-btn:hover{
+  cursor:pointer
+}
+
+/* Sign up */
+.form__sign-up.active{
+  display: flex;
+}
+
+.form__sign-up{
+  display: none;
+}
+
+.form__sign-in.active{
+  display: flex;
+}
+
+.form__sign-in{
+  display: none;
+}
+
+/* Password strength */
+.password__strength-container.active{
+  width: 100%;
+  height: 1rem;
+  display: flex;
+  flex-direction: row;
+  gap: .5rem;
+}
+
+.password__strength-container{
+  display: none;
+}
+
+.password__strength-box{
+  width: 20%;
+  height: 100%;
+  background-color: hsl(240, 50%, 50%);
+  border-radius: 1rem;; 
+}
+
+.password__check-errors-message{
+  color: hsl(0, 50%, 40%);
+}
